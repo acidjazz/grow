@@ -1,0 +1,31 @@
+clearfix()
+  &:before
+  &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+  zoom: 1 if support-for-ie
+
+fontfaces(dir, fonts)
+
+  for font in fonts
+    @font-face
+      font-family font
+      src url(../fnt/dir/font.eot)
+      src url(../fnt/dir/font.eot?#iefix) format('embedded-opentype'),
+        url(../fnt/dir/font.woff2) format('woff2'),
+        url(../fnt/dir/font.woff) format('woff'),
+        url(../fnt/dir/font.ttf) format('truetype'),
+        url(../fnt/dir/font.svg#font) format('svg')
+      font-weight normal
+      font-style normal
+
+
+
+filterblur(size)
+  -webkit-filter blur(size)
+  -moz-filter blur(size)
+  -o-filter blur(size)
+  -ms-filter blur(size)
+  filter blur(size)

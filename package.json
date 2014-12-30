@@ -1,0 +1,30 @@
+{
+  "name": "grow",
+  "version": "0.0.0",
+  "description": "grow calculator",
+  "main": "index.html",
+  "dependencies": {
+    "jade": "^1.8.2",
+    "nodemon": "^1.2.1",
+    "stylus": "^0.49.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:acidjazz/grow.git"
+  },
+  "keywords": [
+    "grow",
+    "calculator",
+    "weed"
+  ],
+  "author": "kevin olson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acidjazz/grow/issues"
+  },
+  "homepage": "https://github.com/acidjazz/grow"
+}

@@ -1,0 +1,10 @@
+
+<vendor-prefixes>?= webkit moz o ms official</vendor-prefixes>
+<body>
+  <margin>0</margin>
+  <padding>0</padding>
+  <font-family>roboto-light</font-family>
+  <font-size>20px</font-size>
+  <background-color>c_mono4</background-color>
+  <color>c_mono1</color>
+</body>
