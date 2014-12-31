@@ -17,13 +17,10 @@ html(lang='en')
     block script 
       script(type='text/javascript').
 
+        Loader.scripts.jst_lib.push('jquery.min');
         Loader.scripts.jst.push('main');
 
-        Loader.scripts.jst_lib.push('jquery.min');
-
         Loader.i( function(result) {
-
-          $.ajaxSetup({data: {format: 'json'}});
 
           if (result) {
 
@@ -34,6 +31,5 @@ html(lang='en')
           }
 
         });
-
 
     block postscript

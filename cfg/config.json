@@ -1,10 +1,11 @@
+
 {
+
   "cfg": {
-    "url": "http://www.talko.com/",
-    "appid": "569298031",
+    "url": "http://www.growcalculator.com/",
     "meta": {
-      "title": "Talko | Talko is the best way to use your voice to get things done.",
-      "description": "Designed for the new style of work: mobile, anytime, anywhere."
+      "title": "Weed Grow Room Calculator",
+      "description": "this is the description"
     },
 
     "analytics": "UA-40713261-1"

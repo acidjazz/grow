@@ -1,6 +1,123 @@
 
 extends layout
 block content
-  .container 
-    .uc under construction
 
+  .header #{self.config.meta.title}
+
+  .outputs
+
+    .line
+
+    .output.ppl
+      .icon
+        include ../svg/light59.svg
+      .label Pound Per Light
+      .value 
+        span.d $
+        span.v 0
+        | / month
+
+    .output.cpc
+      .icon
+        include ../svg/dollar178.svg
+      .label Cost Per Crop
+      .value
+        span.d $
+        span.v 0
+        | / month
+
+    .output.cpp
+      .icon
+        include ../svg/imbalanced.svg
+      .label Cost Per Pound
+      .value
+        span.d $
+        span.v 0
+        | / month
+
+    .output.ppc
+      .icon
+        include ../svg/dollarsign1.svg
+      .label Profit Per Crop
+      .value
+        span.d $
+        span.v 0
+        | / month
+
+    .output.ppp
+      .icon
+        include ../svg/hand210.svg
+      .label Profit Per Pound
+      .value
+        span.d $
+        span.v 0
+        | / month
+
+    .output.ipy
+      .icon
+        include ../svg/dollar147.svg
+      .label Income per year
+      .value
+        span.d $
+        span.v 0
+        | / month
+
+
+  .inputs
+
+    .group.left
+
+      .input.lir
+        .label Number of Lights in Room
+        .tinput
+          input(type='text',placeholder='0')
+      .clear
+
+      .input.cpy
+        .label Number of crops produced a year
+        .tinput
+          input(type='text',placeholder='0')
+      .clear
+
+      .input.meb
+        .label Average monthly Electricity Bill
+        .tinput
+          input.larger(type='text',placeholder='0.00')
+      .clear
+
+      .input.snc
+        .label Soil and Nutrient cost per crop
+        .tinput
+          input(type='text',placeholder='0.00')
+      .clear
+
+    .group.right
+
+      .input.rpm
+        .label Rent per Month
+        .tinput
+          input(type='text',placeholder='0.00')
+      .clear
+
+      .input.mcp
+        .label Misc Cost Per Crop
+        .tinput
+          input(type='text',placeholder='0.00')
+      .clear
+
+      .input.lpc
+        .label Pounds Per Crop
+        .tinput
+          input(type='text',placeholder='0')
+      .clear
+
+      .input.spp
+        .label Sale Price Per Pound
+        .tinput
+          input(type='text',placeholder='0.00')
+      .clear
+
+  script(type='text/javascript').
+    function loadercomplete() {
+      Loader.load('./jst/i.js', 'I');
+    }

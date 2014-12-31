@@ -4,16 +4,106 @@ vendor-prefixes ?= webkit moz o ms official
 @import variables
 @import vendor
 @import mixins
-
+@import fonts
 
 body
   margin 0
   padding 0
   font-family roboto-light
   font-size 20px
-  background-color 
+  background-color c_white 
   color c_mono1
-  > .container > .uc
-    margin 5em 0 0 0
-    font-size 2em
-    text-align center
+
+.header
+  color c_mono1
+  padding 1em
+
+.outputs
+  margin 1em 0em
+  background-color c_mono4
+  border-top 1px solid c_mono3
+  border-bottom 1px solid c_mono3
+  text-align center
+  padding 1em 0
+  position relative
+  > .line
+    border-top 1px solid c_mono3
+    border-bottom 1px solid c_mono3
+    position absolute
+    top 3.7em
+    left 0
+    z-index 1
+    width 100%
+  > .output
+    position relative
+    display inline-block
+    width 7em
+    height 7em
+    margin 0 1em
+    z-index 10
+    &.ppl > .icon > svg
+      > path, > g > path, > g > g > path
+        fill c_green
+    &.cpc > .icon > svg
+      > path, > g > path, > g > g > path
+        fill c_orange
+    &.cpp > .icon > svg
+      > path, > g > path, > g > g > path
+        fill c_blue
+    &.ppc > .icon > svg
+      > path, > g > path, > g > g > path
+        fill c_purple
+    &.ppp > .icon > svg
+      > path, > g > path, > g > g > path
+        fill c_red
+    &.ipy > .icon > svg
+      > path, > g > path, > g > g > path
+        fill c_yellow
+    > .icon
+      border 2px solid c_mono3
+      width 3em
+      height 3em
+      padding 1em
+      border-radius 50%
+      background-color c_white
+      margin auto
+      > svg
+        width inherit
+        height inherit
+        > path, > g > path, > g > g > path
+          fill c_mono1
+
+    > .label
+      font-size 0.9em
+      text-align center
+      margin 0.5em 0
+    > .value
+      font-size 0.8em
+      text-align center
+      > span
+        font-family roboto-black
+
+.inputs 
+  margin 1em 2em
+
+  > .group
+    &.left
+      float left
+    &.right
+      float right
+
+    > .input
+      margin 0.5em 0
+      > .label
+        float left
+        padding 0.25em 2em 0.25em 0.25em
+      > .tinput
+        float right
+        > input
+          font-size 1em
+          padding 0.25em 0.5em
+          color c_mono2
+          width 3em
+          text-align right
+.clear
+  clearfix()

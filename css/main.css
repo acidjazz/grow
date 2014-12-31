@@ -1,13 +1,262 @@
+@font-face {
+  font-family: roboto-thin;
+  src: url("../fnt/roboto/roboto-thin.eot");
+  src: url("../fnt/roboto/roboto-thin.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-thin.woff2") format('woff2'), url("../fnt/roboto/roboto-thin.woff") format('woff'), url("../fnt/roboto/roboto-thin.ttf") format('truetype'), url("../fnt/roboto/roboto-thin.svg#roboto-thin") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-thinitalic;
+  src: url("../fnt/roboto/roboto-thinitalic.eot");
+  src: url("../fnt/roboto/roboto-thinitalic.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-thinitalic.woff2") format('woff2'), url("../fnt/roboto/roboto-thinitalic.woff") format('woff'), url("../fnt/roboto/roboto-thinitalic.ttf") format('truetype'), url("../fnt/roboto/roboto-thinitalic.svg#roboto-thinitalic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-light;
+  src: url("../fnt/roboto/roboto-light.eot");
+  src: url("../fnt/roboto/roboto-light.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-light.woff2") format('woff2'), url("../fnt/roboto/roboto-light.woff") format('woff'), url("../fnt/roboto/roboto-light.ttf") format('truetype'), url("../fnt/roboto/roboto-light.svg#roboto-light") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-lightitalic;
+  src: url("../fnt/roboto/roboto-lightitalic.eot");
+  src: url("../fnt/roboto/roboto-lightitalic.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-lightitalic.woff2") format('woff2'), url("../fnt/roboto/roboto-lightitalic.woff") format('woff'), url("../fnt/roboto/roboto-lightitalic.ttf") format('truetype'), url("../fnt/roboto/roboto-lightitalic.svg#roboto-lightitalic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-regular;
+  src: url("../fnt/roboto/roboto-regular.eot");
+  src: url("../fnt/roboto/roboto-regular.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-regular.woff2") format('woff2'), url("../fnt/roboto/roboto-regular.woff") format('woff'), url("../fnt/roboto/roboto-regular.ttf") format('truetype'), url("../fnt/roboto/roboto-regular.svg#roboto-regular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-italic;
+  src: url("../fnt/roboto/roboto-italic.eot");
+  src: url("../fnt/roboto/roboto-italic.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-italic.woff2") format('woff2'), url("../fnt/roboto/roboto-italic.woff") format('woff'), url("../fnt/roboto/roboto-italic.ttf") format('truetype'), url("../fnt/roboto/roboto-italic.svg#roboto-italic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-medium;
+  src: url("../fnt/roboto/roboto-medium.eot");
+  src: url("../fnt/roboto/roboto-medium.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-medium.woff2") format('woff2'), url("../fnt/roboto/roboto-medium.woff") format('woff'), url("../fnt/roboto/roboto-medium.ttf") format('truetype'), url("../fnt/roboto/roboto-medium.svg#roboto-medium") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-mediumitalic;
+  src: url("../fnt/roboto/roboto-mediumitalic.eot");
+  src: url("../fnt/roboto/roboto-mediumitalic.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-mediumitalic.woff2") format('woff2'), url("../fnt/roboto/roboto-mediumitalic.woff") format('woff'), url("../fnt/roboto/roboto-mediumitalic.ttf") format('truetype'), url("../fnt/roboto/roboto-mediumitalic.svg#roboto-mediumitalic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-bold;
+  src: url("../fnt/roboto/roboto-bold.eot");
+  src: url("../fnt/roboto/roboto-bold.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-bold.woff2") format('woff2'), url("../fnt/roboto/roboto-bold.woff") format('woff'), url("../fnt/roboto/roboto-bold.ttf") format('truetype'), url("../fnt/roboto/roboto-bold.svg#roboto-bold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-blackitalic;
+  src: url("../fnt/roboto/roboto-blackitalic.eot");
+  src: url("../fnt/roboto/roboto-blackitalic.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-blackitalic.woff2") format('woff2'), url("../fnt/roboto/roboto-blackitalic.woff") format('woff'), url("../fnt/roboto/roboto-blackitalic.ttf") format('truetype'), url("../fnt/roboto/roboto-blackitalic.svg#roboto-blackitalic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-black;
+  src: url("../fnt/roboto/roboto-black.eot");
+  src: url("../fnt/roboto/roboto-black.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-black.woff2") format('woff2'), url("../fnt/roboto/roboto-black.woff") format('woff'), url("../fnt/roboto/roboto-black.ttf") format('truetype'), url("../fnt/roboto/roboto-black.svg#roboto-black") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: roboto-bolditalic;
+  src: url("../fnt/roboto/roboto-bolditalic.eot");
+  src: url("../fnt/roboto/roboto-bolditalic.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/roboto-bolditalic.woff2") format('woff2'), url("../fnt/roboto/roboto-bolditalic.woff") format('woff'), url("../fnt/roboto/roboto-bolditalic.ttf") format('truetype'), url("../fnt/roboto/roboto-bolditalic.svg#roboto-bolditalic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: robotocondensed-light;
+  src: url("../fnt/roboto/robotocondensed-light.eot");
+  src: url("../fnt/roboto/robotocondensed-light.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/robotocondensed-light.woff2") format('woff2'), url("../fnt/roboto/robotocondensed-light.woff") format('woff'), url("../fnt/roboto/robotocondensed-light.ttf") format('truetype'), url("../fnt/roboto/robotocondensed-light.svg#robotocondensed-light") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: robotocondensed-lightitalic;
+  src: url("../fnt/roboto/robotocondensed-lightitalic.eot");
+  src: url("../fnt/roboto/robotocondensed-lightitalic.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/robotocondensed-lightitalic.woff2") format('woff2'), url("../fnt/roboto/robotocondensed-lightitalic.woff") format('woff'), url("../fnt/roboto/robotocondensed-lightitalic.ttf") format('truetype'), url("../fnt/roboto/robotocondensed-lightitalic.svg#robotocondensed-lightitalic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: robotocondensed-regular;
+  src: url("../fnt/roboto/robotocondensed-regular.eot");
+  src: url("../fnt/roboto/robotocondensed-regular.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/robotocondensed-regular.woff2") format('woff2'), url("../fnt/roboto/robotocondensed-regular.woff") format('woff'), url("../fnt/roboto/robotocondensed-regular.ttf") format('truetype'), url("../fnt/roboto/robotocondensed-regular.svg#robotocondensed-regular") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: robotocondensed-italic;
+  src: url("../fnt/roboto/robotocondensed-italic.eot");
+  src: url("../fnt/roboto/robotocondensed-italic.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/robotocondensed-italic.woff2") format('woff2'), url("../fnt/roboto/robotocondensed-italic.woff") format('woff'), url("../fnt/roboto/robotocondensed-italic.ttf") format('truetype'), url("../fnt/roboto/robotocondensed-italic.svg#robotocondensed-italic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: robotocondensed-bold;
+  src: url("../fnt/roboto/robotocondensed-bold.eot");
+  src: url("../fnt/roboto/robotocondensed-bold.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/robotocondensed-bold.woff2") format('woff2'), url("../fnt/roboto/robotocondensed-bold.woff") format('woff'), url("../fnt/roboto/robotocondensed-bold.ttf") format('truetype'), url("../fnt/roboto/robotocondensed-bold.svg#robotocondensed-bold") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: robotocondensed-bolditalic;
+  src: url("../fnt/roboto/robotocondensed-bolditalic.eot");
+  src: url("../fnt/roboto/robotocondensed-bolditalic.eot?#iefix") format('embedded-opentype'), url("../fnt/roboto/robotocondensed-bolditalic.woff2") format('woff2'), url("../fnt/roboto/robotocondensed-bolditalic.woff") format('woff'), url("../fnt/roboto/robotocondensed-bolditalic.ttf") format('truetype'), url("../fnt/roboto/robotocondensed-bolditalic.svg#robotocondensed-bolditalic") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: roboto-light;
   font-size: 20px;
-background-color
+  background-color: #fff;
   color: #666;
 }
-body > .container > .uc {
-  margin: 5em 0 0 0;
-  font-size: 2em;
+.header {
+  color: #666;
+  padding: 1em;
+}
+.outputs {
+  margin: 1em 0em;
+  background-color: #ededed;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   text-align: center;
+  padding: 1em 0;
+  position: relative;
+}
+.outputs > .line {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  position: absolute;
+  top: 3.7em;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+.outputs > .output {
+  position: relative;
+  display: inline-block;
+  width: 7em;
+  height: 7em;
+  margin: 0 1em;
+  z-index: 10;
+}
+.outputs > .output.ppl > .icon > svg > path,
+.outputs > .output.ppl > .icon > svg > g > path,
+.outputs > .output.ppl > .icon > svg > g > g > path {
+  fill: #7ad085;
+}
+.outputs > .output.cpc > .icon > svg > path,
+.outputs > .output.cpc > .icon > svg > g > path,
+.outputs > .output.cpc > .icon > svg > g > g > path {
+  fill: #ff8034;
+}
+.outputs > .output.cpp > .icon > svg > path,
+.outputs > .output.cpp > .icon > svg > g > path,
+.outputs > .output.cpp > .icon > svg > g > g > path {
+  fill: #74bade;
+}
+.outputs > .output.ppc > .icon > svg > path,
+.outputs > .output.ppc > .icon > svg > g > path,
+.outputs > .output.ppc > .icon > svg > g > g > path {
+  fill: #b18ed4;
+}
+.outputs > .output.ppp > .icon > svg > path,
+.outputs > .output.ppp > .icon > svg > g > path,
+.outputs > .output.ppp > .icon > svg > g > g > path {
+  fill: #e25e5b;
+}
+.outputs > .output.ipy > .icon > svg > path,
+.outputs > .output.ipy > .icon > svg > g > path,
+.outputs > .output.ipy > .icon > svg > g > g > path {
+  fill: #f4c320;
+}
+.outputs > .output > .icon {
+  border: 2px solid #ccc;
+  width: 3em;
+  height: 3em;
+  padding: 1em;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: auto;
+}
+.outputs > .output > .icon > svg {
+  width: inherit;
+  height: inherit;
+}
+.outputs > .output > .icon > svg > path,
+.outputs > .output > .icon > svg > g > path,
+.outputs > .output > .icon > svg > g > g > path {
+  fill: #666;
+}
+.outputs > .output > .label {
+  font-size: 0.9em;
+  text-align: center;
+  margin: 0.5em 0;
+}
+.outputs > .output > .value {
+  font-size: 0.8em;
+  text-align: center;
+}
+.outputs > .output > .value > span {
+  font-family: roboto-black;
+}
+.inputs {
+  margin: 1em 2em;
+}
+.inputs > .group.left {
+  float: left;
+}
+.inputs > .group.right {
+  float: right;
+}
+.inputs > .group > .input {
+  margin: 0.5em 0;
+}
+.inputs > .group > .input > .label {
+  float: left;
+  padding: 0.25em 2em 0.25em 0.25em;
+}
+.inputs > .group > .input > .tinput {
+  float: right;
+}
+.inputs > .group > .input > .tinput > input {
+  font-size: 1em;
+  padding: 0.25em 0.5em;
+  color: #999;
+  width: 3em;
+  text-align: right;
+}
+.clear {
+  zoom: 1;
+}
+.clear:before,
+.clear:after {
+  content: "";
+  display: table;
+}
+.clear:after {
+  clear: both;
 }
