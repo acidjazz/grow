@@ -2,17 +2,23 @@
 ## outputs
 # ppl = pound per light, cpc = cost per crop, cpp = cost per pound
 # ppc = profit per crop, ppp = profit per pound, ipy = income per year
-# formula: ppl = lpc / lir
 ## inputs
 # lir = lights in room, cpy = crops produced a year, meb = month elec bill
-# snc = soil and nutrient cost per crop, rpm = rent per month, misc cost per crop
+# snc = soil and nutrient cost per crop, rpm = rent per month, mcp = misc cost per crop
 # lpc = pounds per crop, spp = sale price per pound
 ##
+# formula: ppl = lpc / lir
+# formula: cpc = snc + (meb*12) / cpy + (rpm * 12) / cpy + mcp
+# formula: cpp = (cpc/ppc)
+# formula: ppc = (spp * lpc) - cpc
+# formual: ppp = ppc / lpc
+# formual: ipy = ppc * cpy
 
 I =
   i: ->
 
     I.handlers()
+    I.calc()
 
   handlers: ->
 
@@ -23,18 +29,27 @@ I =
 
   calc: ->
 
-    lir = $('.input.lir > .tinput > input').val()
-    lpc = $('.input.lpc > .tinput > input').val()
+    lpc = I.g('lpc')
 
-    I.set 'ppl', I.get('lpc') / I.get('lir')
+    I.s 'ppl', lpc / I.g('lir')
+    cpc = I.g('snc') + ( I.g('meb') * 12) / I.g('cpy') + (I.g('rpm') * 12) / I.g('cpy') + I.g('mcp')
+    I.s 'cpc', cpc
+    I.s 'cpp', cpc / lpc
+    ppc = (I.g('spp') * lpc) - cpc
+    I.s 'ppc', ppc
+    I.s 'ppp', ppc / lpc
+    I.s 'ipy', ppc * I.g 'cpy'
 
-  get: (el) ->
-    return $(".input.#{el} > .tinput > input").val()
+  g: (el) ->
+    return parseFloat($(".input.#{el} > .tinput > input").val())
 
-  set: (el, val) ->
+  s: (el, val) ->
 
     val = (Math.round(val * 10) / 10).toFixed(2)
-    $(".output.#{el} > .value > span.v").html val
+    $(".output.#{el} > .value > span.v").html I.nf val
 
 
+
+  nf: (num) ->
+    num.toString().replace /\B(?=(\d{3})+(?!\d))/g, ","
 

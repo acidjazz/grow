@@ -64,25 +64,25 @@ block content
       .input.lir
         .label Number of Lights in Room
         .tinput
-          input(type='text',placeholder='0')
+          input(type='number',placeholder='6',value=6)
       .clear
 
       .input.cpy
         .label Number of crops produced a year
         .tinput
-          input(type='text',placeholder='0')
+          input(type='number',value='5.0')
       .clear
 
       .input.meb
         .label Average monthly Electricity Bill
         .tinput
-          input.larger(type='text',placeholder='0.00')
+          input.larger(type='number',value='500.00')
       .clear
 
       .input.snc
         .label Soil and Nutrient cost per crop
         .tinput
-          input(type='text',placeholder='0.00')
+          input(type='number',value='500.00')
       .clear
 
     .group.right
@@ -90,25 +90,25 @@ block content
       .input.rpm
         .label Rent per Month
         .tinput
-          input(type='text',placeholder='0.00')
+          input(type='number',value='1000.00')
       .clear
 
       .input.mcp
         .label Misc Cost Per Crop
         .tinput
-          input(type='text',placeholder='0.00')
+          input(type='number',value='1000.00')
       .clear
 
       .input.lpc
         .label Pounds Per Crop
         .tinput
-          input(type='text',placeholder='0')
+          input(type='number',value='10')
       .clear
 
       .input.spp
         .label Sale Price Per Pound
         .tinput
-          input(type='text',placeholder='0.00')
+          input(type='number',value='2500.00')
       .clear
 
   script(type='text/javascript').
