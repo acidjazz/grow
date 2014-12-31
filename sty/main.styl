@@ -1,10 +1,19 @@
+
 vendor-prefixes ?= webkit moz o ms official
+
+@import variables
+@import vendor
+@import mixins
+
 
 body
   margin 0
   padding 0
   font-family roboto-light
   font-size 20px
-  background-color c_mono4
+  background-color 
   color c_mono1
-
+  > .container > .uc
+    margin 5em 0 0 0
+    font-size 2em
+    text-align center

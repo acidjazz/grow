@@ -46,16 +46,12 @@ Loader =
   ]
 
   compatible: ->
-    ### deal w/ browser compatibility later.. major bugs
     return Loader.redirect() if Loader.browser == 'Chrome' and Loader.version < 17
     return Loader.redirect() if Loader.browser == 'MSIE' and Loader.version < 10
     return Loader.redirect() if Loader.browser == 'Explorer' and Loader.version < 10
     return Loader.redirect() if Loader.browser == 'FireFox' and Loader.version < 20
     return Loader.redirect() if Loader.browser == 'Safari' and Loader.version < 6
     return Loader.redirect() if !Loader.browser.indexOf ['Chrome','MSIE','FireFox','Safari']
-    ###
-    return Loader.redirect() if Loader.browser isnt 'Chrome'
-    return Loader.redirect() if Loader.browser is 'Chrome' and Loader.version < 17
     return true
 
   redirect: ->
@@ -65,7 +61,7 @@ Loader =
   loadscripts: (list, complete) ->
     paths = []
     i = 0
-    paths.push '/' + folder.replace(/_/g,'/') + '/' + script + '.js' for script in scripts for folder, scripts of list
+    paths.push './' + folder.replace(/_/g,'/') + '/' + script + '.js' for script in scripts for folder, scripts of list
 
     floop = (arr) ->
       Loader.load paths[i], false, ->
