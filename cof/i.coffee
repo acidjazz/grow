@@ -45,10 +45,8 @@ I =
 
   s: (el, val) ->
 
-    val = (Math.round(val * 10) / 10).toFixed(2)
+    val = (Math.round(val * 100) / 100).toFixed(2)
     $(".output.#{el} > .value > span.v").html I.nf val
-
-
 
   nf: (num) ->
     num.toString().replace /\B(?=(\d{3})+(?!\d))/g, ","

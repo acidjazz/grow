@@ -27,7 +27,7 @@ I = {
     return parseFloat($(".input." + el + " > .tinput > input").val());
   },
   s: function(el, val) {
-    val = (Math.round(val * 10) / 10).toFixed(2);
+    val = (Math.round(val * 100) / 100).toFixed(2);
     return $(".output." + el + " > .value > span.v").html(I.nf(val));
   },
   nf: function(num) {
