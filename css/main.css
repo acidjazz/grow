@@ -283,3 +283,50 @@ body {
 .clear:after {
   clear: both;
 }
+@media all and (min-width: 1px) and (max-width: 940px) {
+  .header > .icon {
+    width: 2em;
+    height: 2em;
+  }
+  .header > .copy {
+    float: right;
+    width: 80%;
+    margin: 0 0.5em;
+  }
+  .header > .copy > .title {
+    font-size: 1em;
+  }
+  .header > .copy > .description {
+    font-size: 0.8em;
+  }
+  .outputs {
+    margin: 0.5em 0 0 0;
+    padding: 0 0.5em;
+  }
+  .outputs > .line {
+    display: none;
+  }
+  .outputs > .output {
+    display: block;
+    width: auto;
+    height: auto;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5em 0;
+    margin: 0;
+  }
+  .outputs > .output > .icon {
+    float: left;
+    padding: 0.25em;
+    width: 2em;
+    height: 2em;
+  }
+  .outputs > .output > .label {
+    float: left;
+    margin: 0.8em 0 0 0.5em;
+  }
+  .outputs > .output > .value {
+    float: right;
+    text-align: left;
+    margin: 1em 0 0 0;
+  }
+}
