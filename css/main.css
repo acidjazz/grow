@@ -329,4 +329,28 @@ body {
     text-align: left;
     margin: 1em 0 0 0;
   }
+  .inputs {
+    margin: 0.5em 0 0 0;
+    padding: 0 0.5em;
+  }
+  .inputs > .group.left,
+  .inputs > .group.right {
+    float: none;
+  }
+  .inputs > .group > .input {
+    margin: 0.5em 0;
+  }
+  .inputs > .group > .input > .label {
+    padding: 0;
+    float: none;
+  }
+  .inputs > .group > .input > .tinput {
+    float: none;
+    text-align: right;
+  }
+  .inputs > .group > .input > .tinput > input {
+    padding: 0;
+    border: 1px solid #ccc;
+    width: 5em;
+  }
 }
