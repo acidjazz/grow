@@ -6,7 +6,8 @@ I = {
     return I.calc();
   },
   handlers: function() {
-    return $('.inputs > .group > .input > .tinput > input').on('keyup', I.change);
+    $('.inputs > .group > .input > .tinput > input').on('keyup', I.change);
+    return $('.inputs > .group > .input > .tinput > input').on('change', I.change);
   },
   change: function() {
     return I.calc();

@@ -23,6 +23,7 @@ I =
   handlers: ->
 
     $('.inputs > .group > .input > .tinput > input'). on 'keyup', I.change
+    $('.inputs > .group > .input > .tinput > input'). on 'change', I.change
 
   change: ->
     I.calc()
