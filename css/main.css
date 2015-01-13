@@ -247,7 +247,10 @@ body {
   font-family: roboto-black;
 }
 .help {
-  display: none;
+  display: block;
+  padding: 0.5em 1em;
+  font-size: 0.8em;
+  text-align: center;
 }
 .inputs {
   margin: 1em 2em;
@@ -358,11 +361,5 @@ body {
     padding: 0;
     border: 1px solid #ccc;
     width: 5em;
-  }
-  .help {
-    display: block;
-    padding: 0.5em 1em;
-    font-size: 0.8em;
-    text-align: center;
   }
 }
