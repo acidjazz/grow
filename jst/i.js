@@ -13,10 +13,11 @@ I = {
     return I.calc();
   },
   calc: function() {
-    var cpc, lpc, ppc;
+    var cpc, cpy, lpc, ppc;
     lpc = I.g('lpc');
+    cpy = I.g('cpy');
     I.s('ppl', lpc / I.g('lir'));
-    cpc = I.g('snc') + (I.g('meb') * 12) / I.g('cpy') + (I.g('rpm') * 12) / I.g('cpy') + I.g('mcp') + I.g('tcpp') + I.g('lcpm');
+    cpc = I.g('snc') + (I.g('meb') * 12) / cpy + (I.g('rpm') * 12) / cpy + I.g('mcp') + (I.g('tcpp') * lpc) + (I.g('lcpm') * 12 / cpy);
     I.s('cpc', cpc);
     I.s('cpp', cpc / lpc);
     ppc = (I.g('spp') * lpc) - cpc;
