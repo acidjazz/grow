@@ -7,12 +7,16 @@
 # snc = soil and nutrient cost per crop, rpm = rent per month, mcp = misc cost per crop
 # lpc = pounds per crop, spp = sale price per pound
 ##
+# lcpm = labor cost per month
+# tcpc = trim cost per pound
+#
 # formula: ppl = lpc / lir
 # formula: cpc = snc + (meb*12) / cpy + (rpm * 12) / cpy + mcp
 # formula: cpp = (cpc/ppc)
 # formula: ppc = (spp * lpc) - cpc
 # formual: ppp = ppc / lpc
 # formual: ipy = ppc * cpy
+# 
 
 I =
   i: ->
@@ -33,7 +37,7 @@ I =
     lpc = I.g('lpc')
 
     I.s 'ppl', lpc / I.g('lir')
-    cpc = I.g('snc') + ( I.g('meb') * 12) / I.g('cpy') + (I.g('rpm') * 12) / I.g('cpy') + I.g('mcp')
+    cpc = I.g('snc') + ( I.g('meb') * 12) / I.g('cpy') + (I.g('rpm') * 12) / I.g('cpy') + I.g('mcp') + I.g('tcpp') + I.g('lcpm')
     I.s 'cpc', cpc
     I.s 'cpp', cpc / lpc
     ppc = (I.g('spp') * lpc) - cpc

@@ -16,7 +16,7 @@ I = {
     var cpc, lpc, ppc;
     lpc = I.g('lpc');
     I.s('ppl', lpc / I.g('lir'));
-    cpc = I.g('snc') + (I.g('meb') * 12) / I.g('cpy') + (I.g('rpm') * 12) / I.g('cpy') + I.g('mcp');
+    cpc = I.g('snc') + (I.g('meb') * 12) / I.g('cpy') + (I.g('rpm') * 12) / I.g('cpy') + I.g('mcp') + I.g('tcpp') + I.g('lcpm');
     I.s('cpc', cpc);
     I.s('cpp', cpc / lpc);
     ppc = (I.g('spp') * lpc) - cpc;
