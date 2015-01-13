@@ -301,7 +301,7 @@ body {
   }
   .outputs {
     margin: 0.5em 0 0 0;
-    padding: 0 0.5em;
+    padding: 0;
   }
   .outputs > .line {
     display: none;
@@ -311,7 +311,7 @@ body {
     width: auto;
     height: auto;
     border-bottom: 1px solid #ccc;
-    padding: 0.5em 0;
+    padding: 0.5em;
     margin: 0;
   }
   .outputs > .output > .icon {
@@ -330,15 +330,15 @@ body {
     margin: 1em 0 0 0;
   }
   .inputs {
-    margin: 1em 0 0 0;
-    padding: 0 0.5em;
+    margin: 0;
   }
   .inputs > .group.left,
   .inputs > .group.right {
     float: none;
   }
   .inputs > .group > .input {
-    margin: 0.5em 0;
+    padding: 0.5em;
+    border-bottom: 1px solid #ccc;
   }
   .inputs > .group > .input > .label {
     padding: 0;
