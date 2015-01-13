@@ -338,6 +338,7 @@ body {
   }
   .inputs > .group > .input {
     padding: 0.5em;
+    margin: 0;
     border-bottom: 1px solid #ccc;
   }
   .inputs > .group > .input > .label {
