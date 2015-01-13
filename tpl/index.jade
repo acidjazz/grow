@@ -2,7 +2,11 @@
 extends layout
 block content
 
-  .header #{self.config.meta.title}
+  .header
+    .icon 
+      include ../svg/logo.svg
+    .copy #{self.config.meta.title}
+    .clear
 
   .outputs
 

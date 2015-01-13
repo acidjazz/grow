@@ -134,7 +134,27 @@ body {
 }
 .header {
   color: #666;
-  padding: 1em;
+  padding: 0.5em 0 0 1em;
+}
+.header > .icon {
+  float: left;
+  width: 3em;
+  height: 3em;
+}
+.header > .icon > svg {
+  width: inherit;
+  height: inherit;
+}
+.header > .icon > svg > path {
+  fill: #666;
+}
+.header > .icon > svg > path:last-child {
+  fill: #7ad085;
+}
+.header > .copy {
+  float: left;
+  margin: 0.3em 0 0 0.5em;
+  font-size: 1.5em;
 }
 .outputs {
   margin: 1em 0em;
