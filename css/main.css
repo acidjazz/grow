@@ -253,7 +253,12 @@ body {
   text-align: center;
 }
 .inputs {
-  margin: 1em 2em;
+  margin: 1em 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.inputs > .group {
+  margin: 0 1em;
 }
 .inputs > .group.left {
   float: left;
@@ -337,11 +342,15 @@ body {
   }
   .inputs {
     margin: 0 0 1em 0;
+    border-top: none;
     border-bottom: 1px solid #ccc;
   }
   .inputs > .group.left,
   .inputs > .group.right {
     float: none;
+  }
+  .inputs > .group {
+    margin: 0;
   }
   .inputs > .group > .input {
     padding: 0.5em 1em;
