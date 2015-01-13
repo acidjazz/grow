@@ -330,7 +330,7 @@ body {
     margin: 1em 0 0 0;
   }
   .inputs {
-    margin: 0.5em 0 0 0;
+    margin: 1em 0 0 0;
     padding: 0 0.5em;
   }
   .inputs > .group.left,
@@ -342,10 +342,11 @@ body {
   }
   .inputs > .group > .input > .label {
     padding: 0;
-    float: none;
+    float: left;
+    font-size: 0.8em;
   }
   .inputs > .group > .input > .tinput {
-    float: none;
+    float: right;
     text-align: right;
   }
   .inputs > .group > .input > .tinput > input {
