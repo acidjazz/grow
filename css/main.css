@@ -134,12 +134,12 @@ body {
 }
 .header {
   color: #666;
-  padding: 0.5em 0 0 1em;
+  padding: 0.5em 0 0 0.5em;
 }
 .header > .icon {
   float: left;
-  width: 3em;
-  height: 3em;
+  width: 4em;
+  height: 4em;
 }
 .header > .icon > svg {
   width: inherit;
@@ -153,7 +153,10 @@ body {
 }
 .header > .copy {
   float: left;
-  margin: 0.3em 0 0 0.5em;
+  margin: 0 0 0 0.5em;
+}
+.header > .copy > .title {
+  font-family: roboto-regular;
   font-size: 1.5em;
 }
 .outputs {

@@ -4,8 +4,8 @@
   "cfg": {
     "url": "http://www.growcalculator.com/",
     "meta": {
-      "title": "Grow Calculator",
-      "description": "this is the description"
+      "title": "growcalc",
+      "description": "Medical Marijuana Cultivation Expense Calculator"
     },
 
     "analytics": "UA-40713261-1"

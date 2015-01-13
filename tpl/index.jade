@@ -5,7 +5,9 @@ block content
   .header
     .icon 
       include ../svg/logo.svg
-    .copy #{self.config.meta.title}
+    .copy
+      .title #{self.config.meta.title}
+      .description #{self.config.meta.description}
     .clear
 
   .outputs
