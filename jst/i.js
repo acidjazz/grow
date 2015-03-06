@@ -17,7 +17,7 @@ I = {
     lpc = I.g('lpc');
     cpy = I.g('cpy');
     I.s('ppl', lpc / I.g('lir'));
-    cpc = I.g('snc') + (I.g('meb') * 12) / cpy + (I.g('rpm') * 12) / cpy + I.g('mcp') + (I.g('tcpp') * lpc) + (I.g('lcpm') * 12 / cpy);
+    cpc = I.g('snc') + (I.g('meb') * 12) / cpy + (I.g('rpm') * 12) / cpy + I.g('mcp') + (I.g('tcpp') * lpc) + (I.g('lcpm') * cpy);
     I.s('cpc', cpc);
     I.s('cpp', cpc / lpc);
     ppc = (I.g('spp') * lpc) - cpc;
