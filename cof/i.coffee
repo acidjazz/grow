@@ -38,7 +38,7 @@ I =
     cpy = I.g('cpy')
 
     I.s 'ppl', lpc / I.g('lir')
-    cpc = I.g('snc') + ( I.g('meb') * 12) / cpy + (I.g('rpm') * 12) / cpy + I.g('mcp') + (I.g('tcpp') * lpc) + (I.g('lcpm'))
+    cpc = I.g('snc') + ( I.g('meb') * 12) / cpy + (I.g('rpm') * 12) / cpy + I.g('mcp') + (I.g('tcpp') * lpc) + (I.g('lcpm'
     I.s 'cpc', cpc
     I.s 'cpp', cpc / lpc
     ppc = (I.g('spp') * lpc) - cpc
