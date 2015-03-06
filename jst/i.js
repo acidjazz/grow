@@ -13,7 +13,7 @@ I = {
     return I.calc();
   },
   calc: function() {
-    var cpc, cpy, lcpm, lir, literal, lpc, math, mcp, meb, ppc, rpm, snc, spp, tcpp;
+    var cpc, cpy, lcpm, lir, lpc, mcp, meb, ppc, rpm, snc, spp, tcpp;
     lpc = I.g('lpc');
     cpy = I.g('cpy');
     meb = I.g('meb');
@@ -26,9 +26,6 @@ I = {
     spp = I.g('spp');
     cpy = I.g('cpy');
     I.s('ppl', lpc / lir);
-    literal = "snc + (meb * 12) / cpy + (rpm * 12) / cpy + mcp + (tcpp * lpc) + lcpm";
-    math = "" + snc + " + (" + meb + " * 12) / " + cpy + " + (" + rpm + " * 12) / " + cpy + " + " + mcp + " + (" + tcpp + " * " + lpc + ") + " + lcpm;
-    $('.bob').html("" + literal + " <br /> " + math);
     cpc = snc + (meb * 12) / cpy + (rpm * 12) / cpy + mcp + (tcpp * lpc) + lcpm;
     I.s('cpc', cpc);
     I.s('cpp', cpc / lpc);

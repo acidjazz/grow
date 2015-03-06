@@ -47,9 +47,10 @@ I =
 
     I.s 'ppl', lpc / lir
 
-    literal = "snc + (meb * 12) / cpy + (rpm * 12) / cpy + mcp + (tcpp * lpc) + lcpm"
-    math ="#{snc} + (#{meb} * 12) / #{cpy} + (#{rpm} * 12) / #{cpy} + #{mcp} + (#{tcpp} * #{lpc}) + #{lcpm}"
-    $('.bob').html "#{literal} <br /> #{math}"
+    #literal = "snc + (meb * 12) / cpy + (rpm * 12) / cpy + mcp + (tcpp * lpc) + lcpm"
+    #math ="#{snc} + (#{meb} * 12) / #{cpy} + (#{rpm} * 12) / #{cpy} + #{mcp} + (#{tcpp} * #{lpc}) + #{lcpm}"
+    #$('.bob').html "#{literal} <br /> #{math}"
+    #
     cpc = snc + (meb * 12) / cpy + (rpm * 12) / cpy + mcp + (tcpp * lpc) + lcpm
     I.s 'cpc', cpc
     I.s 'cpp', cpc / lpc
