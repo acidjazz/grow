@@ -1,4 +1,3 @@
-
 ## outputs
 # ppl = pound per light, cpc = cost per crop, cpp = cost per pound
 # ppc = profit per crop, ppp = profit per pound, ipy = income per year
@@ -34,17 +33,26 @@ I =
 
   calc: ->
 
-    lpc = I.g('lpc')
-    cpy = I.g('cpy')
+    lpc = I.g 'lpc'
+    cpy = I.g 'cpy'
+    meb = I.g 'meb'
+    lir = I.g 'lir'
+    rpm = I.g 'rpm'
+    mcp = I.g 'mcp'
+    tcpp = I.g 'tcpp'
+    lcpm = I.g 'lcpm'
+    snc = I.g 'snc'
+    spp = I.g 'spp'
+    cpy = I.g 'cpy'
 
-    I.s 'ppl', lpc / I.g('lir')
-    cpc = I.g('snc') + ( I.g('meb') * 12) / cpy + (I.g('rpm') * 12) / cpy + I.g('mcp') + (I.g('tcpp') * lpc) + (I.g('lcpm'
+    I.s 'ppl', lpc / lir
+    cpc = snc + (meb * 12) / cpy + (rpm * 12) / cpy + mcp + (tcpp * lpc) + lcpm
     I.s 'cpc', cpc
     I.s 'cpp', cpc / lpc
-    ppc = (I.g('spp') * lpc) - cpc
+    ppc = (spp * lpc) - cpc
     I.s 'ppc', ppc
     I.s 'ppp', ppc / lpc
-    I.s 'ipy', ppc * I.g 'cpy'
+    I.s 'ipy', ppc * cpy
 
   g: (el) ->
     return parseFloat($(".input.#{el} > .tinput > input").val())
