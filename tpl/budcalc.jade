@@ -1,0 +1,139 @@
+
+.title Bud Calc
+.outputs
+  .line
+  .output.ppl
+    .icon
+      include ../svg/light59.svg
+    .label Pound Per Light
+    .value 
+      span.d 
+      span.v 0
+    .clear
+
+  .output.cpc
+    .icon
+      include ../svg/dollar178.svg
+    .label Cost Per Crop
+    .value
+      span.d $
+      span.v 0
+    .clear
+
+  .output.cpp
+    .icon
+      include ../svg/imbalanced.svg
+    .label Cost Per Pound
+    .value
+      span.d $
+      span.v 0
+    .clear
+
+  .output.ppc
+    .icon
+      include ../svg/dollarsign1.svg
+    .label Profit Per Crop
+    .value
+      span.d $
+      span.v 0
+    .clear
+
+  .output.ppp
+    .icon
+      include ../svg/hand210.svg
+    .label Profit Per Pound
+    .value
+      span.d $
+      span.v 0
+    .clear
+
+  .output.ipy
+    .icon
+      include ../svg/dollar147.svg
+    .label Income per year
+    .value
+      span.d $
+      span.v 0
+    .clear
+
+
+.help Change the values below and see your updated results above
+
+.inputs
+
+  .group.left
+
+    .input.lir
+      .label Number of Lights
+      .tinput
+        input(type='number',placeholder='6',value=6)
+      .clear
+    .clear
+
+    .input.cpy
+      .label Number of crops a year
+      .tinput
+        input(type='number',value='5.0')
+      .clear
+    .clear
+
+    .input.meb
+      .label Average Electricity Bill
+      .tinput
+        input.larger(type='number',value='500.00')
+      .clear
+    .clear
+
+    .input.snc
+      .label Soil and Nutrient Cost
+      .tinput
+        input(type='number',value='500.00')
+      .clear
+    .clear
+
+    .input.tcpp
+      .label Trim cost per pound
+      .tinput
+        input(type='number',value='200.00')
+      .clear
+    .clear
+
+  .group.right
+
+    .input.rpm
+      .label Rent per Month
+      .tinput
+        input(type='number',value='1000.00')
+      .clear
+    .clear
+
+    .input.mcp
+      .label Misc Cost Per Crop
+      .tinput
+        input(type='number',value='1000.00')
+      .clear
+    .clear
+
+    .input.lpc
+      .label Pounds Per Crop
+      .tinput
+        input(type='number',value='10')
+      .clear
+    .clear
+
+    .input.lcpm
+      .label Labor Cost Per Crop
+      .tinput
+        input(type='number',value='2000.00')
+      .clear
+    .clear
+
+    .input.spp
+      .label Sale Price Per Pound
+      .tinput
+        input(type='number',value='2500.00')
+      .clear
+    .clear
+
+  .clear
+

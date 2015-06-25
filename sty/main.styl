@@ -34,102 +34,110 @@ body
     > .title
       font-family roboto-regular
       font-size 1.5em
+.calcs
+  margin 1em 0
+  > .calc
+    margin 0 0 2em 0
+    > .title
+      margin 0.5em
+      font-size 1em
 
-.outputs
-  margin 1em 0em
-  background-color c_mono4
-  border-top 1px solid c_mono3
-  border-bottom 1px solid c_mono3
-  text-align center
-  padding 1em 0
-  position relative
-  > .line
+.calcs > .calc > 
+  .outputs
+    margin 0em 0em 1em 0em
+    background-color c_mono4
     border-top 1px solid c_mono3
     border-bottom 1px solid c_mono3
-    position absolute
-    top 3.7em
-    left 0
-    z-index 1
-    width 100%
-  > .output
+    text-align center
+    padding 1em 0
     position relative
-    display inline-block
-    width 6.5em
-    height 6.5em
-    margin 0 1em
-    z-index 10
-    &.ppl > .icon > svg
-      > path, > g > path, > g > g > path
-        fill c_green
-    &.cpc > .icon > svg
-      > path, > g > path, > g > g > path
-        fill c_orange
-    &.cpp > .icon > svg
-      > path, > g > path, > g > g > path
-        fill c_blue
-    &.ppc > .icon > svg
-      > path, > g > path, > g > g > path
-        fill c_purple
-    &.ppp > .icon > svg
-      > path, > g > path, > g > g > path
-        fill c_red
-    &.ipy > .icon > svg
-      > path, > g > path, > g > g > path
-        fill c_yellow
-    > .icon
-      border 2px solid c_mono3
-      width 3em
-      height 3em
-      padding 0.75em
-      border-radius 50%
-      background-color c_white
-      margin auto
-      > svg
-        width inherit
-        height inherit
+    > .line
+      border-top 1px solid c_mono3
+      border-bottom 1px solid c_mono3
+      position absolute
+      top 3.7em
+      left 0
+      z-index 1
+      width 100%
+    > .output
+      position relative
+      display inline-block
+      width 6.5em
+      height 6.5em
+      margin 0 1em
+      z-index 10
+      &.ppl > .icon > svg
         > path, > g > path, > g > g > path
-          fill c_mono1
+          fill c_green
+      &.cpc > .icon > svg, &.wyi > .icon > svg
+        > path, > g > path, > g > g > path
+          fill c_orange
+      &.cpp > .icon > svg, &.cwp > .icon > svg
+        > path, > g > path, > g > g > path
+          fill c_blue
+      &.ppc > .icon > svg, &.ppg > .icon > svg
+        > path, > g > path, > g > g > path
+          fill c_purple
+      &.ppp > .icon > svg, &.ppg > .icon > svg
+        > path, > g > path, > g > g > path
+          fill c_red
+      &.ipy > .icon > svg
+        > path, > g > path, > g > g > path
+          fill c_yellow
+      > .icon
+        border 2px solid c_mono3
+        width 3em
+        height 3em
+        padding 0.75em
+        border-radius 50%
+        background-color c_white
+        margin auto
+        > svg
+          width inherit
+          height inherit
+          > path, > g > path, > g > g > path
+            fill c_mono1
 
-    > .label
-      font-size 0.9em
-      text-align center
-      margin 0.5em 0
-    > .value
-      font-size 0.8em
-      text-align center
-      > span
-        font-family roboto-black
-.help
-  display block
-  padding 0.5em 1em
-  font-size 0.8em
-  text-align center
-
-.inputs 
-  margin 1em 0
-  border-top 1px solid c_mono3
-  border-bottom 1px solid c_mono3
-
-  > .group
-    margin 0 1em
-    &.left
-      float left
-    &.right
-      float right
-
-    > .input
-      margin 0.5em 0
       > .label
+        font-size 0.9em
+        text-align center
+        margin 0.5em 0
+      > .value
+        font-size 0.8em
+        text-align center
+        > span
+          font-family roboto-black
+  .help
+    display block
+    padding 0.5em 1em
+    font-size 0.8em
+    text-align center
+
+  .inputs 
+    margin 0
+    border-top 1px solid c_mono3
+    border-bottom 1px solid c_mono3
+
+    > .group
+      margin 0 1em
+      &.left
         float left
-        padding 0.25em 2em 0.25em 0.25em
-      > .tinput
+      &.right
         float right
-        > input
-          font-size 1em
-          padding 0.25em 0.5em
-          color c_mono2
-          width 6em
-          text-align right
+
+      > .input
+        margin 0.5em 0
+        > .label
+          float left
+          padding 0.25em 2em 0.25em 0.25em
+        > .tinput
+          float right
+          > input
+            font-size 1em
+            padding 0.25em 0.5em
+            color c_mono2
+            width 6em
+            text-align right
 .clear
   clearfix()
 

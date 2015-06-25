@@ -25,47 +25,44 @@ I =
 
   handlers: ->
 
-    $('.inputs > .group > .input > .tinput > input'). on 'keyup', I.change
-    $('.inputs > .group > .input > .tinput > input'). on 'change', I.change
+    $('.calcs > .calc.budcalc > .inputs > .group > .input > .tinput > input'). on 'keyup', I.budcalc
+    $('.calcs > .calc.budcalc > .inputs > .group > .input > .tinput > input'). on 'change', I.budcalc
 
-  change: ->
-    I.calc()
+  budcalc: ->
 
-  calc: ->
+    lpc = I.g 'budcalc', 'lpc'
+    cpy = I.g 'budcalc', 'cpy'
+    meb = I.g 'budcalc', 'meb'
+    lir = I.g 'budcalc', 'lir'
+    rpm = I.g 'budcalc', 'rpm'
+    mcp = I.g 'budcalc', 'mcp'
+    tcpp = I.g 'budcalc', 'tcpp'
+    lcpm = I.g 'budcalc', 'lcpm'
+    snc = I.g 'budcalc', 'snc'
+    spp = I.g 'budcalc', 'spp'
+    cpy = I.g 'budcalc', 'cpy'
 
-    lpc = I.g 'lpc'
-    cpy = I.g 'cpy'
-    meb = I.g 'meb'
-    lir = I.g 'lir'
-    rpm = I.g 'rpm'
-    mcp = I.g 'mcp'
-    tcpp = I.g 'tcpp'
-    lcpm = I.g 'lcpm'
-    snc = I.g 'snc'
-    spp = I.g 'spp'
-    cpy = I.g 'cpy'
-
-    I.s 'ppl', lpc / lir
+    I.s 'budcalc', 'ppl', lpc / lir
 
     #literal = "snc + (meb * 12) / cpy + (rpm * 12) / cpy + mcp + (tcpp * lpc) + lcpm"
     #math ="#{snc} + (#{meb} * 12) / #{cpy} + (#{rpm} * 12) / #{cpy} + #{mcp} + (#{tcpp} * #{lpc}) + #{lcpm}"
     #$('.bob').html "#{literal} <br /> #{math}"
     #
     cpc = snc + (meb * 12) / cpy + (rpm * 12) / cpy + mcp + (tcpp * lpc) + lcpm
-    I.s 'cpc', cpc
-    I.s 'cpp', cpc / lpc
+    I.s 'budcalc', 'cpc', cpc
+    I.s 'budcalc', 'cpp', cpc / lpc
     ppc = (spp * lpc) - cpc
-    I.s 'ppc', ppc
-    I.s 'ppp', ppc / lpc
-    I.s 'ipy', ppc * cpy
+    I.s 'budcalc', 'ppc', ppc
+    I.s 'budcalc', 'ppp', ppc / lpc
+    I.s 'budcalc', 'ipy', ppc * cpy
 
-  g: (el) ->
-    return parseFloat($(".input.#{el} > .tinput > input").val())
+  g: (calc, el) ->
+    return parseFloat($(".calcs > .calc.#{calc} > .inputs > .input.#{el} > .tinput > input").val())
 
-  s: (el, val) ->
+  s: (calc, el, val) ->
 
     val = (Math.round(val * 100) / 100).toFixed(2)
-    $(".output.#{el} > .value > span.v").html I.nf val
+    $(".calcs > .calc.#{calc} > .outputs > .output.#{el} > .value > span.v").html I.nf val
 
   nf: (num) ->
     num.toString().replace /\B(?=(\d{3})+(?!\d))/g, ","

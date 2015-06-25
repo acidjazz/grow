@@ -159,8 +159,18 @@ body {
   font-family: roboto-regular;
   font-size: 1.5em;
 }
-.outputs {
-  margin: 1em 0em;
+.calcs {
+  margin: 1em 0;
+}
+.calcs > .calc {
+  margin: 0 0 2em 0;
+}
+.calcs > .calc > .title {
+  margin: 0.5em;
+  font-size: 1em;
+}
+.calcs > .calc > .outputs {
+  margin: 0em 0em 1em 0em;
   background-color: #ededed;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -168,7 +178,7 @@ body {
   padding: 1em 0;
   position: relative;
 }
-.outputs > .line {
+.calcs > .calc > .outputs > .line {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   position: absolute;
@@ -177,7 +187,7 @@ body {
   z-index: 1;
   width: 100%;
 }
-.outputs > .output {
+.calcs > .calc > .outputs > .output {
   position: relative;
   display: inline-block;
   width: 6.5em;
@@ -185,37 +195,49 @@ body {
   margin: 0 1em;
   z-index: 10;
 }
-.outputs > .output.ppl > .icon > svg > path,
-.outputs > .output.ppl > .icon > svg > g > path,
-.outputs > .output.ppl > .icon > svg > g > g > path {
+.calcs > .calc > .outputs > .output.ppl > .icon > svg > path,
+.calcs > .calc > .outputs > .output.ppl > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.ppl > .icon > svg > g > g > path {
   fill: #7ad085;
 }
-.outputs > .output.cpc > .icon > svg > path,
-.outputs > .output.cpc > .icon > svg > g > path,
-.outputs > .output.cpc > .icon > svg > g > g > path {
+.calcs > .calc > .outputs > .output.cpc > .icon > svg > path,
+.calcs > .calc > .outputs > .output.wyi > .icon > svg > path,
+.calcs > .calc > .outputs > .output.cpc > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.wyi > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.cpc > .icon > svg > g > g > path,
+.calcs > .calc > .outputs > .output.wyi > .icon > svg > g > g > path {
   fill: #ff8034;
 }
-.outputs > .output.cpp > .icon > svg > path,
-.outputs > .output.cpp > .icon > svg > g > path,
-.outputs > .output.cpp > .icon > svg > g > g > path {
+.calcs > .calc > .outputs > .output.cpp > .icon > svg > path,
+.calcs > .calc > .outputs > .output.cwp > .icon > svg > path,
+.calcs > .calc > .outputs > .output.cpp > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.cwp > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.cpp > .icon > svg > g > g > path,
+.calcs > .calc > .outputs > .output.cwp > .icon > svg > g > g > path {
   fill: #74bade;
 }
-.outputs > .output.ppc > .icon > svg > path,
-.outputs > .output.ppc > .icon > svg > g > path,
-.outputs > .output.ppc > .icon > svg > g > g > path {
+.calcs > .calc > .outputs > .output.ppc > .icon > svg > path,
+.calcs > .calc > .outputs > .output.ppg > .icon > svg > path,
+.calcs > .calc > .outputs > .output.ppc > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.ppg > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.ppc > .icon > svg > g > g > path,
+.calcs > .calc > .outputs > .output.ppg > .icon > svg > g > g > path {
   fill: #b18ed4;
 }
-.outputs > .output.ppp > .icon > svg > path,
-.outputs > .output.ppp > .icon > svg > g > path,
-.outputs > .output.ppp > .icon > svg > g > g > path {
+.calcs > .calc > .outputs > .output.ppp > .icon > svg > path,
+.calcs > .calc > .outputs > .output.ppg > .icon > svg > path,
+.calcs > .calc > .outputs > .output.ppp > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.ppg > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.ppp > .icon > svg > g > g > path,
+.calcs > .calc > .outputs > .output.ppg > .icon > svg > g > g > path {
   fill: #e25e5b;
 }
-.outputs > .output.ipy > .icon > svg > path,
-.outputs > .output.ipy > .icon > svg > g > path,
-.outputs > .output.ipy > .icon > svg > g > g > path {
+.calcs > .calc > .outputs > .output.ipy > .icon > svg > path,
+.calcs > .calc > .outputs > .output.ipy > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.ipy > .icon > svg > g > g > path {
   fill: #f4c320;
 }
-.outputs > .output > .icon {
+.calcs > .calc > .outputs > .output > .icon {
   border: 2px solid #ccc;
   width: 3em;
   height: 3em;
@@ -225,58 +247,58 @@ body {
   background-color: #fff;
   margin: auto;
 }
-.outputs > .output > .icon > svg {
+.calcs > .calc > .outputs > .output > .icon > svg {
   width: inherit;
   height: inherit;
 }
-.outputs > .output > .icon > svg > path,
-.outputs > .output > .icon > svg > g > path,
-.outputs > .output > .icon > svg > g > g > path {
+.calcs > .calc > .outputs > .output > .icon > svg > path,
+.calcs > .calc > .outputs > .output > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output > .icon > svg > g > g > path {
   fill: #666;
 }
-.outputs > .output > .label {
+.calcs > .calc > .outputs > .output > .label {
   font-size: 0.9em;
   text-align: center;
   margin: 0.5em 0;
 }
-.outputs > .output > .value {
+.calcs > .calc > .outputs > .output > .value {
   font-size: 0.8em;
   text-align: center;
 }
-.outputs > .output > .value > span {
+.calcs > .calc > .outputs > .output > .value > span {
   font-family: roboto-black;
 }
-.help {
+.calcs > .calc > .help {
   display: block;
   padding: 0.5em 1em;
   font-size: 0.8em;
   text-align: center;
 }
-.inputs {
-  margin: 1em 0;
+.calcs > .calc > .inputs {
+  margin: 0;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
-.inputs > .group {
+.calcs > .calc > .inputs > .group {
   margin: 0 1em;
 }
-.inputs > .group.left {
+.calcs > .calc > .inputs > .group.left {
   float: left;
 }
-.inputs > .group.right {
+.calcs > .calc > .inputs > .group.right {
   float: right;
 }
-.inputs > .group > .input {
+.calcs > .calc > .inputs > .group > .input {
   margin: 0.5em 0;
 }
-.inputs > .group > .input > .label {
+.calcs > .calc > .inputs > .group > .input > .label {
   float: left;
   padding: 0.25em 2em 0.25em 0.25em;
 }
-.inputs > .group > .input > .tinput {
+.calcs > .calc > .inputs > .group > .input > .tinput {
   float: right;
 }
-.inputs > .group > .input > .tinput > input {
+.calcs > .calc > .inputs > .group > .input > .tinput > input {
   font-size: 1em;
   padding: 0.25em 0.5em;
   color: #999;
@@ -310,14 +332,14 @@ body {
   .header > .copy > .description {
     font-size: 0.8em;
   }
-  .outputs {
+  .calcs > .calc > .outputs {
     margin: 0.5em 0 0 0;
     padding: 0;
   }
-  .outputs > .line {
+  .calcs > .calc > .outputs > .line {
     display: none;
   }
-  .outputs > .output {
+  .calcs > .calc > .outputs > .output {
     display: block;
     width: auto;
     height: auto;
@@ -325,48 +347,48 @@ body {
     padding: 0.5em 1em;
     margin: 0;
   }
-  .outputs > .output > .icon {
+  .calcs > .calc > .outputs > .output > .icon {
     float: left;
     padding: 0.25em;
     width: 2em;
     height: 2em;
   }
-  .outputs > .output > .label {
+  .calcs > .calc > .outputs > .output > .label {
     float: left;
     margin: 0.8em 0 0 0.5em;
   }
-  .outputs > .output > .value {
+  .calcs > .calc > .outputs > .output > .value {
     float: right;
     text-align: left;
     margin: 1em 0 0 0;
   }
-  .inputs {
+  .calcs > .calc > .inputs {
     margin: 0 0 1em 0;
     border-top: none;
     border-bottom: 1px solid #ccc;
   }
-  .inputs > .group.left,
-  .inputs > .group.right {
+  .calcs > .calc > .inputs > .group.left,
+  .calcs > .calc > .inputs > .group.right {
     float: none;
   }
-  .inputs > .group {
+  .calcs > .calc > .inputs > .group {
     margin: 0;
   }
-  .inputs > .group > .input {
+  .calcs > .calc > .inputs > .group > .input {
     padding: 0.5em 1em;
     margin: 0;
     border-top: 1px solid #ccc;
   }
-  .inputs > .group > .input > .label {
+  .calcs > .calc > .inputs > .group > .input > .label {
     padding: 0;
     float: left;
     font-size: 0.8em;
   }
-  .inputs > .group > .input > .tinput {
+  .calcs > .calc > .inputs > .group > .input > .tinput {
     float: right;
     text-align: right;
   }
-  .inputs > .group > .input > .tinput > input {
+  .calcs > .calc > .inputs > .group > .input > .tinput > input {
     padding: 0;
     border: 1px solid #ccc;
     width: 5em;
