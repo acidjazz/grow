@@ -81,7 +81,7 @@ I =
     ppg = ((spc * gwp) - cwp) / gwp
     I.s 'dabcalc', 'ppg', ppg
 
-    ppb = (gwp-spc) - cwp
+    ppb = (gwp*spc) - cwp
     I.s 'dabcalc', 'ppb', ppb
 
     console.log got, lcb, tpc, mcb, gcb, gwp, spc

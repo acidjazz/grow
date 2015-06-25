@@ -49,7 +49,7 @@ I = {
     I.s('dabcalc', 'cwp', cwp);
     ppg = ((spc * gwp) - cwp) / gwp;
     I.s('dabcalc', 'ppg', ppg);
-    ppb = (gwp - spc) - cwp;
+    ppb = (gwp * spc) - cwp;
     I.s('dabcalc', 'ppb', ppb);
     return console.log(got, lcb, tpc, mcb, gcb, gwp, spc);
   },
