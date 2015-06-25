@@ -24,7 +24,7 @@
   .output.ppg
     .icon
       include ../svg/dollars5.svg
-    .label Profit Per Gram
+    .label Profit per Gram
     .value
       span.d
       span.v 0
@@ -33,7 +33,7 @@
   .output.ppb
     .icon
       include ../svg/money315.svg
-    .label Profit Per Batch
+    .label Profit per Batch
     .value
       span.d
       span.v 0
@@ -45,10 +45,62 @@
 
   .group.left
 
-
     .input.got
       .label Grams of Trim
       .tinput
         input(type='number',placeholder='50',value=50)
       .clear
     .clear
+
+    .input.lcb
+      .label Labor Cost per Batch
+      .tinput
+        input(type='number',placeholder='100',value=100)
+      .clear
+    .clear
+
+    .input.tpc
+      .label Time Purchase Cost
+      .tinput
+        input(type='number',placeholder='250',value=250)
+      .clear
+    .clear
+
+    .input.mcb
+      .label Misc Cost per Batch
+      .tinput
+        input(type='number',placeholder='50',value=50)
+      .clear
+    .clear
+
+  .group.right
+
+    .input.gcb
+      .label Gas Cost per Batch
+      .tinput
+        input(type='number',placeholder='12.5',value=12.5)
+      .clear
+    .clear
+
+
+    .input.gwp
+      .label Grams of Wax Produced
+      .tinput
+        input(type='number',placeholder='15',value=15)
+      .clear
+    .clear
+
+    .input.spc
+      .label Sale Price per Gram
+      .tinput
+        input(type='number',placeholder='50',value=50)
+      .clear
+    .clear
+
+  .clear
+
+
+
+
+
+

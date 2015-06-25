@@ -225,11 +225,11 @@ body {
   fill: #b18ed4;
 }
 .calcs > .calc > .outputs > .output.ppp > .icon > svg > path,
-.calcs > .calc > .outputs > .output.ppg > .icon > svg > path,
+.calcs > .calc > .outputs > .output.ppb > .icon > svg > path,
 .calcs > .calc > .outputs > .output.ppp > .icon > svg > g > path,
-.calcs > .calc > .outputs > .output.ppg > .icon > svg > g > path,
+.calcs > .calc > .outputs > .output.ppb > .icon > svg > g > path,
 .calcs > .calc > .outputs > .output.ppp > .icon > svg > g > g > path,
-.calcs > .calc > .outputs > .output.ppg > .icon > svg > g > g > path {
+.calcs > .calc > .outputs > .output.ppb > .icon > svg > g > g > path {
   fill: #e25e5b;
 }
 .calcs > .calc > .outputs > .output.ipy > .icon > svg > path,

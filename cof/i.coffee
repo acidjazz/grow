@@ -1,9 +1,25 @@
+
+I =
+  i: ->
+
+    I.handlers()
+    I.budcalc()
+    I.dabcalc()
+
+  handlers: ->
+
+    $('.calcs > .calc.budcalc > .inputs > .group > .input > .tinput > input'). on 'keyup', I.budcalc
+    $('.calcs > .calc.budcalc > .inputs > .group > .input > .tinput > input'). on 'change', I.budcalc
+
+    $('.calcs > .calc.dabcalc > .inputs > .group > .input > .tinput > input'). on 'keyup', I.dabcalc
+    $('.calcs > .calc.dabcalc > .inputs > .group > .input > .tinput > input'). on 'change', I.dabcalc
+
 ## outputs
 # ppl = pound per light, cpc = cost per crop, cpp = cost per pound
 # ppc = profit per crop, ppp = profit per pound, ipy = income per year
 ## inputs
 # lir = lights in room, cpy = crops produced a year, meb = month elec bill
-# snc = soil and nutrient cost per crop, rpm = rent per month, mcp = misc cost per crop
+# snc = soil and nutrient cost per crop, rpm = rent per month, mcb = misc cost per crop
 # lpc = pounds per crop, spp = sale price per pound
 ##
 # lcpm = labor cost per month
@@ -16,17 +32,6 @@
 # formual: ppp = ppc / lpc
 # formual: ipy = ppc * cpy
 # 
-
-I =
-  i: ->
-
-    I.handlers()
-    I.calc()
-
-  handlers: ->
-
-    $('.calcs > .calc.budcalc > .inputs > .group > .input > .tinput > input'). on 'keyup', I.budcalc
-    $('.calcs > .calc.budcalc > .inputs > .group > .input > .tinput > input'). on 'change', I.budcalc
 
   budcalc: ->
 
@@ -56,8 +61,33 @@ I =
     I.s 'budcalc', 'ppp', ppc / lpc
     I.s 'budcalc', 'ipy', ppc * cpy
 
+
+  dabcalc: ->
+
+    got = I.g 'dabcalc', 'got'
+    lcb = I.g 'dabcalc', 'lcb'
+    tpc = I.g 'dabcalc', 'tpc'
+    mcb = I.g 'dabcalc', 'mcb'
+    gcb = I.g 'dabcalc', 'gcb'
+    gwp = I.g 'dabcalc', 'gwp'
+    spc = I.g 'dabcalc', 'spc'
+
+    wyi = gwp / got
+    I.s 'dabcalc', 'wyi', wyi
+
+    cwp = lcb + tpc + mcb + gcb
+    I.s 'dabcalc', 'cwp', cwp
+
+    ppg = ((spc * gwp) - cwp) / gwp
+    I.s 'dabcalc', 'ppg', ppg
+
+    ppb = (gwp-spc) - cwp
+    I.s 'dabcalc', 'ppb', ppb
+
+    console.log got, lcb, tpc, mcb, gcb, gwp, spc
+
   g: (calc, el) ->
-    return parseFloat($(".calcs > .calc.#{calc} > .inputs > .input.#{el} > .tinput > input").val())
+    return parseFloat($(".calcs > .calc.#{calc} > .inputs > .group > .input.#{el} > .tinput > input").val())
 
   s: (calc, el, val) ->
 
@@ -66,4 +96,6 @@ I =
 
   nf: (num) ->
     num.toString().replace /\B(?=(\d{3})+(?!\d))/g, ","
+
+
 
