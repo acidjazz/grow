@@ -1,6 +1,9 @@
 
 weed growing calculator project
 ===
+
+![App Icon](ico/apple-touch-icon-152x152.png
+
 calculates your shizzle
 
 ### requirements (advised to install in order)
